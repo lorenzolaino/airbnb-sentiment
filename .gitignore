@@ -130,3 +130,6 @@ dmypy.json
 
 # zip  files
 *.zip
+
+# PyCharm files
+/.idea
