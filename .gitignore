@@ -128,8 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# zip  files
+# Dataset files
 *.zip
+*.csv
 
 # PyCharm files
 /.idea
