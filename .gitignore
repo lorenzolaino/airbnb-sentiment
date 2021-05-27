@@ -132,5 +132,9 @@ dmypy.json
 *.zip
 *.csv
 
+# Generated files
+*.txt
+*.model
+
 # PyCharm files
 /.idea
