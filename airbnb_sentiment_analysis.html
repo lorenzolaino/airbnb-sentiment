@@ -16617,7 +16617,7 @@ each word with the corresponding tfidf score.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
@@ -16625,11 +16625,41 @@ each word with the corresponding tfidf score.</p>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfidfScores</span> <span class="o">=</span> <span class="n">dfCleanedReviews</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">replace_tfidf_words</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">transformed</span><span class="p">,</span> <span class="n">features</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">tfidfScores</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [6.45518200427728, 3.6108140688773807, 1.62336...
+1    [2.034512963851828, 2.407209379251587, 2.64191...
+2    [2.091150860411193, 4.119858950780223, 4.87009...
+3    [1.8501655371557688, 2.159718877149754, 2.7123...
+4    [3.927308953862587, 3.246732537406179, 2.84084...
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16682,7 +16712,7 @@ closeness score.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
@@ -16693,11 +16723,41 @@ closeness score.</p>
         <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">replace_sentiment_words</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dictSentiment2Clusters</span><span class="p">),</span>
             <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+
+<span class="n">closenessScores2Clusters</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [0.07985111004577553, -0.18808361904308693, 0....
+1    [-0.14785354721731972, -0.18808361904308693, 0...
+2    [0.11543748268633972, -0.13276076032773343, 0....
+3    [0.1381656620939012, -0.11938607074241883, -0....
+4    [-0.13562855624442288, 0.13688366219516676, -0...
+Name: comments, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16792,7 +16852,7 @@ each review.</p>
     </tr>
     <tr>
       <th>1</th>
-      <td>[-0.1478535472173197, -0.18808361904308693, 0....</td>
+      <td>[-0.14785354721731972, -0.18808361904308693, 0...</td>
       <td>[2.034512963851828, 2.407209379251587, 2.64191...</td>
       <td>it be really nice area food park transport be ...</td>
       <td>-1.837079</td>
@@ -17078,7 +17138,7 @@ Name: comments, dtype: float64</pre>
     </tr>
     <tr>
       <th>1</th>
-      <td>[-0.1478535472173197, -0.18808361904308693, 0....</td>
+      <td>[-0.14785354721731972, -0.18808361904308693, 0...</td>
       <td>[2.034512963851828, 2.407209379251587, 2.64191...</td>
       <td>it be really nice area food park transport be ...</td>
       <td>-1.837079</td>
@@ -17836,7 +17896,7 @@ results would be the same with respect to the previous ones.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
@@ -17847,11 +17907,41 @@ results would be the same with respect to the previous ones.</p>
         <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">replace_sentiment_words</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dictSentiment3Clusters</span><span class="p">),</span>
             <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+
+<span class="n">closenessScores3Clusters</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [0.0, 0.1798011283274767, 0.0, 0.0, 0.0, 0.0, ...
+1    [0.14073132621331927, 0.1798011283274767, 0.0,...
+2    [0.0, 0.1447761464322067, 0.0, 0.0, 0.0, 0.135...
+3    [0.0, -0.14353125369217165, -0.099881655919928...
+4    [0.0, 0.0, -0.0845358454151889, -0.10166596849...
+Name: comments, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19224,7 +19314,7 @@ package of the 'nltk' library is used.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
@@ -19232,11 +19322,41 @@ package of the 'nltk' library is used.</p>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfidfScoresWithoutStopWords</span> <span class="o">=</span> <span class="n">dfCleanedReviewsWithoutStopWords</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">replace_tfidf_words</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">transformed</span><span class="p">,</span> <span class="n">features</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">tfidfScoresWithoutStopWords</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [6.45518200427728, 3.112217967778944, 3.555659...
+1    [2.6419108992866036, 2.1582410989662106, 3.154...
+2    [2.1582410989662106, 1.8573260246038177, 2.148...
+3    [1.8501655371557688, 2.159718877149754, 2.7123...
+4    [3.927308953862587, 2.8408487877668502, 6.4401...
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19260,7 +19380,7 @@ package of the 'nltk' library is used.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
@@ -19271,11 +19391,41 @@ package of the 'nltk' library is used.</p>
         <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">replace_sentiment_words</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dictSentiment2ClustersWithoutStopWords</span><span class="p">),</span>
             <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+
+<span class="n">closenessScores2ClustersWithoutStopWords</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [0.08274272026931886, 0.14438650901133268, 0.1...
+1    [0.21196840433660452, 0.17771365086007282, 0.1...
+2    [0.17771365086007282, 0.17679454909616302, 0.1...
+3    [0.20011867647250559, 0.16337263418936798, 0.1...
+4    [0.18721176816409277, 0.1347721306573096, 0.11...
+Name: comments, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19379,7 +19529,7 @@ package of the 'nltk' library is used.</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>[0.2001186764725056, 0.16337263418936798, 0.10...</td>
+      <td>[0.20011867647250559, 0.16337263418936798, 0.1...</td>
       <td>[1.8501655371557688, 2.159718877149754, 2.7123...</td>
       <td>great location close mauerpark kastanienallee ...</td>
       <td>4.887016</td>
@@ -19622,7 +19772,7 @@ Name: comments, dtype: float64</pre>
     </tr>
     <tr>
       <th>3</th>
-      <td>[0.2001186764725056, 0.16337263418936798, 0.10...</td>
+      <td>[0.20011867647250559, 0.16337263418936798, 0.1...</td>
       <td>[1.8501655371557688, 2.159718877149754, 2.7123...</td>
       <td>great location close mauerpark kastanienallee ...</td>
       <td>4.887016</td>
@@ -19808,7 +19958,7 @@ inertia_ 945731.9965046742
 inertia_ 928825.8544302889
 inertia_ 916296.311814165
 inertia_ 903468.412742547
-inertia_ 893577.2260768567
+inertia_ 893577.2260768566
 inertia_ 886675.7141103031
 inertia_ 879206.5099118422
 inertia_ 872744.2123647004
@@ -20258,7 +20408,7 @@ interesting to check how much the model accuracy changes.</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
@@ -20269,11 +20419,41 @@ interesting to check how much the model accuracy changes.</p>
         <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">replace_sentiment_words</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dictSentiment3ClustersWithoutStopWords</span><span class="p">),</span>
             <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+
+<span class="n">closenessScores3ClustersWithoutStopWords</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1530401787107...
+1    [0.0, 0.0, 0.1530401787107593, 0.0962295034379...
+2    [0.0, 0.0, 0.1417771922395551, 0.0, 0.0, -0.14...
+3    [0.0, 0.1948514168094835, 0.14606870725559232,...
+4    [0.0, 0.12948971833364556, 0.14316824211234594...
+Name: comments, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -25955,13 +26135,13 @@ on the feature is used.</p>
 <pre>inertia_ 50423691.93300878
 inertia_ 22749705.231198255
 inertia_ 11986753.435834724
-inertia_ 7141239.833383515
+inertia_ 7141239.833383508
 inertia_ 4652318.868546425
-inertia_ 3221570.3233643337
-inertia_ 2451968.1154055977
-inertia_ 1906398.496859258
-inertia_ 1464994.1426850928
-inertia_ 1154390.054370799
+inertia_ 3221570.3233643332
+inertia_ 2451968.115405595
+inertia_ 1906398.4968592592
+inertia_ 1464994.1426850932
+inertia_ 1154390.0543707996
 </pre>
 </div>
 </div>
@@ -26466,7 +26646,7 @@ split into train and test data.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[181]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 </pre></div>
 
      </div>
@@ -26501,17 +26681,17 @@ split into train and test data.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[  32   42   88]
+<pre>[[  31   42   89]
  [   7 4688  252]
  [  27 1040  551]]
               precision    recall  f1-score   support
 
-        high       0.48      0.20      0.28       162
+        high       0.48      0.19      0.27       162
          low       0.81      0.95      0.87      4947
       medium       0.62      0.34      0.44      1618
 
     accuracy                           0.78      6727
-   macro avg       0.64      0.50      0.53      6727
+   macro avg       0.64      0.49      0.53      6727
 weighted avg       0.76      0.78      0.76      6727
 
 </pre>
@@ -26946,17 +27126,17 @@ to build the classification model with all the features.</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[  38   52   72]
- [  17 4532  398]
- [  67  979  572]]
+<pre>[[  41   50   71]
+ [  16 4532  399]
+ [  67  983  568]]
               precision    recall  f1-score   support
 
-        high       0.31      0.23      0.27       162
+        high       0.33      0.25      0.29       162
          low       0.81      0.92      0.86      4947
       medium       0.55      0.35      0.43      1618
 
     accuracy                           0.76      6727
-   macro avg       0.56      0.50      0.52      6727
+   macro avg       0.56      0.51      0.53      6727
 weighted avg       0.74      0.76      0.74      6727
 
 </pre>
@@ -28072,11 +28252,11 @@ Name: price, dtype: float64</pre>
 <pre>inertia_ 45048012.13141702
 inertia_ 19474539.282685257
 inertia_ 9888890.89284995
-inertia_ 5951239.391527219
-inertia_ 4017791.519083903
+inertia_ 5951239.391527218
+inertia_ 4017791.5190839022
 inertia_ 2686837.9447985156
-inertia_ 2057194.3297260057
-inertia_ 1542785.6091806763
+inertia_ 2057194.3297260054
+inertia_ 1542785.6091806765
 inertia_ 1231264.4508484812
 inertia_ 1010421.0352468445
 </pre>
@@ -28569,12 +28749,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[  39   45   88]
- [   7 4685  237]
- [  36 1060  524]]
+<pre>[[  40   45   87]
+ [   8 4683  238]
+ [  37 1059  524]]
               precision    recall  f1-score   support
 
-        high       0.48      0.23      0.31       172
+        high       0.47      0.23      0.31       172
          low       0.81      0.95      0.87      4929
       medium       0.62      0.32      0.42      1620
 
@@ -29011,8 +29191,8 @@ The results are comparable to the ones previously-obtained.</p>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[[  43   47   82]
- [  22 4520  387]
- [  73  941  606]]
+ [  23 4521  385]
+ [  74  946  600]]
               precision    recall  f1-score   support
 
         high       0.31      0.25      0.28       172
@@ -29020,8 +29200,8 @@ The results are comparable to the ones previously-obtained.</p>
       medium       0.56      0.37      0.45      1620
 
     accuracy                           0.77      6721
-   macro avg       0.57      0.51      0.53      6721
-weighted avg       0.75      0.77      0.75      6721
+   macro avg       0.56      0.51      0.53      6721
+weighted avg       0.74      0.77      0.75      6721
 
 </pre>
 </div>
@@ -30124,13 +30304,13 @@ Name: price, dtype: float64</pre>
 <pre>inertia_ 29647571.181845747
 inertia_ 10952425.152054831
 inertia_ 5195561.180060062
-inertia_ 3112965.2132134023
-inertia_ 1906995.0425681705
+inertia_ 3112965.213213402
+inertia_ 1906995.042568169
 inertia_ 1343673.020441699
 inertia_ 1048576.6461750846
-inertia_ 785178.0813910342
-inertia_ 573827.4998944453
-inertia_ 470431.5170721666
+inertia_ 785178.0813910343
+inertia_ 573827.499894445
+inertia_ 470431.51707216655
 </pre>
 </div>
 </div>
@@ -31062,17 +31242,17 @@ The results are slightly worse than the ones obtained in the previous analysis.<
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[3607  587   31]
- [ 881  984   98]
+<pre>[[3606  587   32]
+ [ 886  978   99]
  [  87  194   96]]
               precision    recall  f1-score   support
 
         high       0.79      0.85      0.82      4225
          low       0.56      0.50      0.53      1963
-      medium       0.43      0.25      0.32       377
+      medium       0.42      0.25      0.32       377
 
     accuracy                           0.71      6565
-   macro avg       0.59      0.54      0.56      6565
+   macro avg       0.59      0.54      0.55      6565
 weighted avg       0.70      0.71      0.70      6565
 
 </pre>
@@ -31377,48 +31557,48 @@ of data-points with the label 'medium'.</p>
   </thead>
   <tbody>
     <tr>
-      <th>7326</th>
-      <td>4</td>
+      <th>15979</th>
+      <td>2</td>
       <td>1.0</td>
       <td>1.0</td>
-      <td>2.0</td>
+      <td>1.0</td>
       <td>40.0</td>
       <td>low</td>
     </tr>
     <tr>
-      <th>19277</th>
-      <td>3</td>
+      <th>3015</th>
+      <td>2</td>
       <td>1.0</td>
       <td>1.0</td>
-      <td>2.0</td>
+      <td>1.0</td>
+      <td>50.0</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>17818</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
       <td>27.0</td>
       <td>low</td>
     </tr>
     <tr>
-      <th>19675</th>
-      <td>2</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>35.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>18646</th>
-      <td>2</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>30.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>7752</th>
+      <th>10923</th>
       <td>1</td>
       <td>1.0</td>
       <td>1.0</td>
-      <td>2.0</td>
-      <td>15.0</td>
+      <td>1.0</td>
+      <td>25.0</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>9924</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>52.0</td>
       <td>low</td>
     </tr>
   </tbody>
@@ -31538,14 +31718,14 @@ classification experiment.</p>
   </thead>
   <tbody>
     <tr>
-      <th>16925</th>
-      <td>1</td>
+      <th>11839</th>
+      <td>2</td>
       <td>1.0</td>
       <td>1.0</td>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>2759</th>
+      <th>11919</th>
       <td>2</td>
       <td>2.0</td>
       <td>1.0</td>
@@ -31559,11 +31739,11 @@ classification experiment.</p>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>12635</th>
-      <td>1</td>
+      <th>13293</th>
+      <td>2</td>
       <td>1.0</td>
       <td>1.0</td>
-      <td>2.0</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>16740</th>
@@ -31663,17 +31843,17 @@ classification experiment.</p>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[[1179  181  256]
- [  41 1336  308]
- [ 261  620  816]]
+ [  44 1302  339]
+ [ 261  624  812]]
               precision    recall  f1-score   support
 
-        high       0.80      0.73      0.76      1616
-         low       0.63      0.79      0.70      1685
-      medium       0.59      0.48      0.53      1697
+        high       0.79      0.73      0.76      1616
+         low       0.62      0.77      0.69      1685
+      medium       0.58      0.48      0.52      1697
 
-    accuracy                           0.67      4998
-   macro avg       0.67      0.67      0.66      4998
-weighted avg       0.67      0.67      0.66      4998
+    accuracy                           0.66      4998
+   macro avg       0.66      0.66      0.66      4998
+weighted avg       0.66      0.66      0.66      4998
 
 </pre>
 </div>
